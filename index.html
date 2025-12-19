@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Agence immobilière à Douala : vente, achat et location de biens immobiliers. Découvrez nos propriétés à des prix abordables.">
+    <meta name="keywords" content="immobilier, Douala, vente, location, appartement, maison">
+    <meta name="author" content="Agence Immobilière Douala">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com/">
+    <meta property="og:title" content="Agence Immobilière Douala">
+    <meta property="og:description" content="Vente, achat et location de biens immobiliers à Douala.">
+    <meta property="og:image" content="https://votre-site.com/maison_accueil.jpg">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://votre-site.com/">
+    <meta property="twitter:title" content="Agence Immobilière Douala">
+    <meta property="twitter:description" content="Vente, achat et location de biens immobiliers à Douala.">
+    <meta property="twitter:image" content="https://votre-site.com/maison_accueil.jpg">
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "Agence Immobilière Douala",
+        "description": "Agence immobilière spécialisée dans la vente, achat et location de biens à Douala.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Douala",
+            "addressCountry": "CM"
+        },
+        "telephone": "+237-XXX-XXX-XXX",
+        "url": "https://votre-site.com/"
+    }
+    </script>
+    <title>Prestations Immobilières - Votre Agence</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- En-tête avec navigation -->
+    <header>
+        <h1 data-key="title">Agence Immobilière Douala</h1>
+        <nav>
+            <ul>
+                <li><a href="#accueil" data-key="nav-accueil">Accueil</a></li>
+                <li><a href="#services" data-key="nav-services">Services</a></li>
+                <li><a href="#estimation" data-key="nav-estimation">Estimation</a></li>
+                <li><a href="#biens" data-key="nav-biens">Biens</a></li>
+                <li><a href="#apropos" data-key="nav-apropos">À Propos</a></li>                <li><a href="#faq" data-key="nav-faq">FAQ</a></li>                <li><a href="#temoignages" data-key="nav-temoignages">Témoignages</a></li>
+                <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+            </ul>
+            <button id="langSwitch" aria-label="Changer de langue">EN</button>
+            <button id="themeSwitch" aria-label="Changer de thème">🌙</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section d'accueil -->
+        <section id="accueil">
+            <h2 data-key="welcome-title">Bienvenue chez nous</h2>
+            <p data-key="welcome-text">Nous offrons des prestations immobilières de qualité à Douala pour vous accompagner dans vos projets.</p>
+            <img src="maison_accueil.jpg" alt="Maison moderne avec jardin devant" loading="lazy">
+        </section>
+
+        <!-- Section des services -->
+        <section id="services">
+            <h2 data-key="services-title">Nos Services</h2>
+            <div class="services-container">
+                <div class="service">
+                    <h3 data-key="service-vente-title">Vente</h3>
+                    <p data-key="service-vente-text">Accompagnement personnalisé pour la vente de votre bien.</p>
+                </div>
+                <div class="service">
+                    <h3 data-key="service-achat-title">Achat</h3>
+                    <p data-key="service-achat-text">Trouvez le bien de vos rêves avec notre expertise.</p>
+                </div>
+                <div class="service">
+                    <h3 data-key="service-location-title">Location</h3>
+                    <p data-key="service-location-text">Gestion locative et recherche de locataires.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section estimation -->
+        <section id="estimation">
+            <h2 data-key="estimation-title">Estimez la Valeur de Votre Propriété</h2>
+            <p data-key="estimation-text">Entrez les détails de votre propriété pour obtenir une estimation approximative basée sur le marché de Douala.</p>
+            <form id="estimationForm">
+                <div class="form-group">
+                    <label for="surface" data-key="surface-label">Surface (m²)</label>
+                    <input type="number" id="surface" data-key="surface-placeholder" placeholder="Ex: 100" required>
+                </div>
+                <div class="form-group">
+                    <label for="pieces" data-key="pieces-label">Nombre de pièces</label>
+                    <input type="number" id="pieces" data-key="pieces-placeholder" placeholder="Ex: 3" required>
+                </div>
+                <div class="form-group">
+                    <label for="quartier" data-key="quartier-label">Quartier</label>
+                    <select id="quartier" required>
+                        <option value="bonapriso" data-key="quartier-bonapriso">Bonapriso</option>
+                        <option value="akwa" data-key="quartier-akwa">Akwa</option>
+                        <option value="bonanjo" data-key="quartier-bonanjo">Bonanjo</option>
+                        <option value="bonaberi" data-key="quartier-bonaberi">Bonabéri</option>
+                        <option value="autre" data-key="quartier-autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="etat" data-key="etat-label">État de la propriété</label>
+                    <select id="etat" required>
+                        <option value="neuf" data-key="etat-neuf">Neuf</option>
+                        <option value="bon" data-key="etat-bon">Bon</option>
+                        <option value="moyen" data-key="etat-moyen">Moyen</option>
+                        <option value="renover" data-key="etat-renover">À rénover</option>
+                    </select>
+                </div>
+                <button type="submit" data-key="estimate-button">Estimer</button>
+            </form>
+            <div id="estimationResult" style="display: none;">
+                <h3 data-key="result-title">Estimation</h3>
+                <p id="resultText"></p>
+            </div>
+        </section>
+
+        <!-- Section des biens disponibles -->
+        <section id="biens">
+            <h2 data-key="biens-title">Biens Disponibles</h2>
+            <div class="filtres">
+                <input type="text" id="search" data-key="search-placeholder" placeholder="Rechercher par nom...">
+                <select id="type">
+                    <option value="" data-key="all-types">Tous types</option>
+                    <option value="vente" data-key="sale">Vente</option>
+                    <option value="location" data-key="rent">Location</option>
+                </select>
+                <select id="prix">
+                    <option value="" data-key="all-prices">Tous prix</option>
+                    <option value="0-50000000" data-key="under-50m">Moins de 50M XAF</option>
+                    <option value="50000000-100000000" data-key="50-100m">50M - 100M XAF</option>
+                    <option value="100000000+" data-key="over-100m">Plus de 100M XAF</option>
+                </select>
+            </div>
+            <div class="biens-container">
+                <div class="bien">
+                    <img src="appartement.jpg" alt="Gratte-ciel avec appartements">
+                    <h3>Appartement 3 pièces</h3>
+                    <p>Douala, 60 000 000 XAF</p>
+                    <a href="propriete-appartement-3pieces.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+                <div class="bien">
+                    <img src="appartement_2chambres.jpg" alt="Appartement 2 chambres">
+                    <h3>Appartement 2 chambres</h3>
+                    <p>Douala, Loyer mensuel 250 000 XAF</p>
+                    <a href="propriete-appartement-2chambres.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+                <div class="bien">
+                    <img src="studio_modern.jpg" alt="Studio moderne">
+                    <h3>Studio moderne</h3>
+                    <p>Douala, Loyer mensuel 200 000 XAF</p>
+                    <a href="propriete-studio-moderne.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+                <div class="bien">
+                    <img src="chambre_modern.jpg" alt="Chambre moderne">
+                    <h3>Chambre moderne</h3>
+                    <p>Douala, Loyer mensuel 150 000 XAF</p>
+                    <a href="propriete-chambre-moderne.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+                <div class="bien">
+                    <img src="maison_familiale.jpg" alt="Maison blanche en campagne">
+                    <h3>Maison familiale</h3>
+                    <p>Douala, 100 000 000 XAF</p>
+                    <a href="propriete-maison-familiale.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+                <div class="bien">
+                    <img src="bureau.jpg" alt="Salon immobilier">
+                    <h3>Bureau commercial</h3>
+                    <p>Douala, 130 000 000 XAF</p>
+                    <a href="propriete-bureau-commercial.html" class="btn-details" data-key="view-details">Voir détails</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section à propos -->
+        <section id="apropos">
+            <h2 data-key="about-title">À Propos de Nous</h2>
+            <p data-key="about-text">Notre agence immobilière à Douala est spécialisée dans la vente, l'achat et la location de biens immobiliers. Avec plus de 10 ans d'expérience, nous accompagnons nos clients dans toutes leurs démarches.</p>
+            <h3 data-key="team-title">Notre Équipe</h3>
+            <div class="equipe">
+                <div class="membre">
+                    <h4>Jean Dupont</h4>
+                    <p data-key="role-director">Directeur</p>
+                </div>
+                <div class="membre">
+                    <h4>Marie Leroy</h4>
+                    <p data-key="role-agent">Agent Commercial</p>
+                </div>
+                <div class="membre">
+                    <h4>Paul Martin</h4>
+                    <p data-key="role-advisor">Conseiller Immobilier</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section id="faq">
+            <h2 data-key="faq-title">Foire aux Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 data-key="faq-q1">Comment obtenir un prêt immobilier à Douala ?</h3>
+                    <p data-key="faq-a1">Les prêts immobiliers sont disponibles via les banques locales comme Afriland First Bank ou BICEC. Apportez vos documents d'identité, justificatifs de revenus et l'acte de propriété.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-key="faq-q2">Quels sont les quartiers les plus prisés à Douala ?</h3>
+                    <p data-key="faq-a2">Bonapriso, Akwa, et Bonanjo sont populaires pour leur accessibilité et commodités. Bonabéri offre des options plus abordables.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-key="faq-q3">Comment estimer la valeur d'une propriété ?</h3>
+                    <p data-key="faq-a3">Utilisez notre outil d'estimation ou contactez-nous pour une évaluation gratuite basée sur la localisation, l'état et le marché actuel.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 data-key="faq-q4">Quels documents sont nécessaires pour une vente ?</h3>
+                    <p data-key="faq-a4">Titre foncier, certificat d'urbanisme, quitus fiscaux, et acte de notaire. Nous vous accompagnons dans toutes les démarches.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section témoignages -->
+        <section id="temoignages">
+            <h2 data-key="testimonials-title">Témoignages</h2>
+            <div class="temoignages-slider">
+                <div class="temoignages-container">
+                    <div class="temoignage active">
+                        <p>"Excellente agence, très professionnelle. Ils m'ont aidé à trouver ma maison idéale."</p>
+                        <cite>- Marie Dupont</cite>
+                    </div>
+                    <div class="temoignage">
+                        <p>"Service rapide et efficace pour la vente de mon appartement. Je recommande !"</p>
+                        <cite>- Jean Martin</cite>
+                    </div>
+                    <div class="temoignage">
+                        <p>"Équipe sympathique et compétente. Merci pour tout."</p>
+                        <cite>- Sophie Leroy</cite>
+                    </div>
+                </div>
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Section contact -->
+        <section id="contact">
+            <h2 data-key="contact-title">Contactez-nous</h2>
+            <p data-key="contact-text">Envoyez-nous un message et nous vous répondrons rapidement.</p>
+            <form id="contactForm" action="/contact" method="post">
+                <input type="hidden" name="subject" value="Message depuis le site immobilier">
+                <div class="form-group">
+                    <label for="nom" data-key="name-label">👤 Nom complet</label>
+                    <input type="text" id="nom" name="nom" data-key="name-placeholder" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" data-key="email-label">📧 Adresse email</label>
+                    <input type="email" id="email" name="email" data-key="email-placeholder" placeholder="votre.email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-key="message-label">💬 Message</label>
+                    <textarea id="message" name="message" data-key="message-placeholder" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+                <button type="submit" data-key="send-message">📤 Envoyer le message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="newsletter">
+            <h3 data-key="newsletter-title">Inscrivez-vous à notre newsletter</h3>
+            <form id="newsletterForm">
+                <input type="email" data-key="email-placeholder-newsletter" placeholder="Votre email" required>
+                <button type="submit" data-key="subscribe">S'inscrire</button>
+            </form>
+        </div>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+        <p>&copy; 2025 Agence Immobilière Douala. Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

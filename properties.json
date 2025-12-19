@@ -1,0 +1,56 @@
+[
+  {
+    "id": "maison-familiale",
+    "title": "Maison familiale",
+    "image": "maison_familiale.jpg",
+    "price": "50 000 000 XAF",
+    "type": "vente",
+    "description": "Belle maison familiale de 4 chambres, salon spacieux, cuisine moderne, jardin privé. Idéale pour une famille nombreuse.",
+    "features": ["4 chambres", "2 salles de bain", "Jardin de 200 m²", "Garage pour 2 voitures", "Proche des écoles et commerces"]
+  },
+  {
+    "id": "appartement-3pieces",
+    "title": "Appartement 3 pièces",
+    "image": "appartement.jpg",
+    "price": "60 000 000 XAF",
+    "type": "vente",
+    "description": "Appartement moderne de 3 pièces avec balcon, cuisine équipée, salle de bain spacieuse. Vue sur la ville.",
+    "features": ["3 pièces", "1 salle de bain", "Balcon", "Cuisine équipée", "Ascenseur"]
+  },
+  {
+    "id": "appartement-2chambres",
+    "title": "Appartement 2 chambres",
+    "image": "appartement_2chambres.jpg",
+    "price": "250 000 XAF",
+    "type": "location",
+    "description": "Appartement confortable de 2 chambres, salon, cuisine, salle de bain. Idéal pour couples ou petits groupes.",
+    "features": ["2 chambres", "1 salle de bain", "Salon", "Cuisine", "Parking"]
+  },
+  {
+    "id": "studio-moderne",
+    "title": "Studio moderne",
+    "image": "studio_modern.jpg",
+    "price": "200 000 XAF",
+    "type": "location",
+    "description": "Studio cosy avec kitchenette, salle de bain, et balcon. Parfait pour étudiants ou jeunes professionnels.",
+    "features": ["1 pièce principale", "Salle de bain", "Kitchenette", "Balcon", "Internet haut débit"]
+  },
+  {
+    "id": "chambre-moderne",
+    "title": "Chambre moderne",
+    "image": "chambre_modern.jpg",
+    "price": "150 000 XAF",
+    "type": "location",
+    "description": "Chambre meublée avec salle de bain partagée, idéale pour location courte ou étudiante.",
+    "features": ["Chambre meublée", "Salle de bain partagée", "Accès cuisine commune", "Proche transports", "Sécurisé"]
+  },
+  {
+    "id": "bureau-commercial",
+    "title": "Bureau commercial",
+    "image": "bureau.jpg",
+    "price": "130 000 000 XAF",
+    "type": "vente",
+    "description": "Bureau spacieux avec open space, salles de réunion, parking. Parfait pour entreprises.",
+    "features": ["Open space", "2 salles de réunion", "Parking", "Climatisation", "Accès facile"]
+  }
+]

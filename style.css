@@ -1,0 +1,798 @@
+/* Variables CSS pour personnalisation facile */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --light-bg: #fff;
+    --dark-bg: #2c3e50;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Styles généraux */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Removed position: fixed to make welcome visible when scrolling */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+#langSwitch {
+    background: #007bff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+#langSwitch:hover {
+    background: #0056b3;
+}
+
+#themeSwitch {
+    background: #007bff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+#themeSwitch:hover {
+    background: #0056b3;
+}
+
+/* Light theme */
+body.light {
+    background-image: none;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light header {
+    background: #fff;
+    color: #333;
+}
+
+body.light nav a {
+    color: #333;
+}
+
+body.light section {
+    background: #fff;
+    color: #333;
+}
+
+body.light .bien {
+    background: #f9f9f9;
+}
+
+body.light .temoignage {
+    background: #f9f9f9;
+}
+
+body.light .service {
+    background: #f9f9f9;
+}
+
+body.light .membre {
+    background: #f9f9f9;
+    color: #333;
+}
+
+body.light .propriete-info {
+    background: rgba(255,255,255,0.9);
+    color: #333;
+}
+
+body.light .faq-item {
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Light theme for contact section */
+body.light #contact {
+    background: #fff;
+    color: #333;
+}
+
+body.light #contact h2 {
+    color: #333;
+    text-shadow: none;
+}
+
+body.light #contact p {
+    color: #666;
+}
+
+body.light label {
+    color: #333;
+}
+
+body.light input, body.light textarea {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+body.light input::placeholder, body.light textarea::placeholder {
+    color: #999;
+}
+
+body.light input:focus, body.light textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.5);
+}
+
+/* Light theme for footer */
+body.light footer {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+body.light .newsletter button {
+    background: #007bff;
+    color: #fff;
+}
+
+body.light .social a {
+    color: #007bff;
+}
+
+/* Light theme for property detail pages */
+body.light .propriete-detail h1 {
+    color: #333;
+}
+
+body.light .propriete-info {
+    background: #f9f9f9;
+    color: #333;
+}
+
+body.light .propriete-info h2 {
+    color: #007bff;
+}
+
+body.light .btn-contact {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#accueil {
+    background-color: #ecf0f1;
+    text-align: center;
+    border-radius: 8px;
+    /* Removed margin-top since header is not fixed */
+}
+
+#accueil img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Services */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.service {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+}
+
+/* Biens */
+.biens-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.filtres {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filtres input, .filtres select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.filtres input:focus, .filtres select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.bien {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    flex: 1 1 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.bien:hover {
+    transform: translateY(-5px);
+}
+
+.bien img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.btn-details {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.btn-details:hover {
+    background: #0056b3;
+}
+
+/* À propos */
+.equipe {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.membre {
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    flex: 1 1 200px;
+}
+
+.membre h4 {
+    color: #007bff;
+}
+
+/* FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    background: rgba(0,0,0,0.7);
+    padding: 1rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.faq-item h3 {
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.faq-item p {
+    display: none;
+    margin-top: 0.5rem;
+}
+
+.faq-item.active p {
+    display: block;
+}
+
+/* Témoignages */
+.temoignages-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.temoignages-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+}
+
+.temoignage {
+    display: none;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    font-style: italic;
+    min-width: 100%;
+}
+
+.temoignage.active {
+    display: block;
+}
+
+.temoignage cite {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.prev-btn, .next-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #0056b3;
+}
+
+/* Estimation */
+#estimation {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 3rem;
+    text-align: center;
+}
+
+#estimation h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#estimation p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#estimationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#estimation .form-group {
+    text-align: left;
+}
+
+#estimation label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#estimation input, #estimation select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+#estimation input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+#estimation input:focus, #estimation select:focus {
+    outline: none;
+    border-color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+#estimation button {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    align-self: center;
+}
+
+#estimation button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ffa500, #ff6b6b);
+}
+
+#estimationResult {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+#estimationResult h3 {
+    color: #ffd700;
+}
+
+/* Light theme for estimation */
+body.light #estimation {
+    background: #fff;
+    color: #333;
+}
+
+body.light #estimation h2 {
+    color: #333;
+    text-shadow: none;
+}
+
+body.light #estimation p {
+    color: #666;
+}
+
+body.light #estimation label {
+    color: #333;
+}
+
+body.light #estimation input, body.light #estimation select {
+    background-color: #fff;
+    color: #333;
+    border: 2px solid #ddd;
+}
+
+body.light #estimation input::placeholder {
+    color: #999;
+}
+
+body.light #estimation input:focus, body.light #estimation select:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.5);
+}
+
+body.light #estimationResult {
+    background: #f9f9f9;
+    color: #333;
+}
+
+body.light #estimationResult h3 {
+    color: #007bff;
+}
+#contact {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    padding: 3rem;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+#contact p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgba(255,255,255,0.1);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    padding: 1rem 2rem;
+    background: linear-gradient(45deg, #ff6b6b, #ffa500);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    align-self: center;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #ffa500, #ff6b6b);
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter {
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.newsletter input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    background: #007bff;
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #0056b3;
+}
+
+.social {
+    margin-bottom: 1rem;
+}
+
+.social a {
+    color: #ffd700;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .services-container, .biens-container, .temoignages-container {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    #calculatorForm {
+        flex-direction: column;
+    }
+}
+
+/* Styles pour les pages de détails des propriétés */
+.propriete-detail {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.propriete-detail h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.propriete-images {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.propriete-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.propriete-info {
+    background: rgba(0,0,0,0.7);
+    padding: 2rem;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.propriete-info h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+.propriete-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.propriete-info li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.propriete-info li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+.btn-contact {
+    background: #007bff;
+    color: #333;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-contact:hover {
+    background: #0056b3;
+}
